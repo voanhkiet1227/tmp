@@ -1,0 +1,15 @@
+{% extends "button.html" %}
+ 
+{% block title %}{{data.title}}{% endblock %}
+ 
+{% block content %}
+<br>
+<span>Block number: {{data.BlockNumber}}<br>
+Docter balance before: {{data.docBalanceBefore}}<br>
+Patient balance before: {{data.paBalanceBefore}}<br>
+Docter balance after: {{data.docBalanceAfter}}<br>
+Patient balance after: {{data.paBalanceAfter}}<br>
+Hex trans: {{data.hexTrans}}<br>
+Trans info: {{data.loadTrans}}<span>
+{{data.body|safe|linebreaks}}
+{% endblock %}
